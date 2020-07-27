@@ -1,0 +1,20 @@
+{
+  "name": "LM-BJS-Module-9",
+  "version": "1.0.0",
+  "description": "Exercises of the Module 9 of Javascript Bootcamp by Lemoncode",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonegs/LM-BJS-Module-9.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sonegs/LM-BJS-Module-9/issues"
+  },
+  "homepage": "https://github.com/sonegs/LM-BJS-Module-9#readme"
+}
