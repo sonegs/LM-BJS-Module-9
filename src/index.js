@@ -1,11 +1,23 @@
-//fetch("https://www.breakingbadapi.com/api/")
-fetch("https://api.github.com/orgs/apple/members")
-    .then(response => {
-        return response.json();
-    }).then(data => {
-        for (var item of data) {
-            console.log(item.login);
-        }
-    }).catch(error => {
-        document.write("Se ha producido un error en la llamada a la API");
-    });
+import axios from "axios";
+import * as Utils from "./utils.js"
+import * as DataBusiness from "./data-business"
+
+
+DataBusiness.getCharacters().then(data => {
+
+    document.getElementById("root").innerText = "";
+    const characters = data;
+    const nodes = [];
+
+    for (let character of characters) {
+        const node = Utils.createCharacterRow(character);
+        nodes.push(node);
+        node.onclick = function() {
+            Utils.showCharacter(character);
+        };
+    }
+
+    for (let node of nodes) {
+        document.getElementById("root").append(node);
+    }
+});
